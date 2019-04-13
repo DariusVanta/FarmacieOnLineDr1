@@ -1,0 +1,87 @@
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<HBox fx:controller="TransactionController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+
+<!--    private String id, idMedicament, idClientCard, date, time;
+    private int numberOfItems;
+    private double basePrice;
+    private double discount; -->
+
+    <VBox>
+        <TableView fx:id="tblTransactions" editable="true">
+            <columns>
+                <TableColumn fx:id="colIdTransaction" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colIdMedicament" text="Medicament ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="idMedicament" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colIdClientCard" text="Client Id Card">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="idClientCard" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colDateTransaction" text="Transaction Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colTimeTransaction" text="Transcation Time">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="time" />
+                    </cellValueFactory>
+                </TableColumn>
+
+
+                <TableColumn fx:id="colNumberOfItemsTransaction" text="Number of Items per Transaction">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="numberOfItems;" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colBasePriceTransaction" text="Transcation Base Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="basePrice" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colDiscountTransaction" text="Transcation discount">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="discount" />
+                    </cellValueFactory>
+                </TableColumn>
+
+            </columns>
+        </TableView>
+        <TextField fx:id="txtTransactionID" promptText="ID"/>
+        <TextField fx:id="txtTransactionIdMedicament" promptText="Medicament ID"/>
+        <TextField fx:id="txtTransactionIdClientCard" promptText="Client ID Card"/>
+        <TextField fx:id="txtTransactionDate" promptText="Transaction Date"/>
+        <TextField fx:id="txtTransactionNumberOfItems" promptText="Number of Items of Transaction"/>
+        <TextField fx:id="txtTransactionBasePrice" promptText=" Transaction base Price"/>
+        <TextField fx:id="txtTransactionDdiscount" promptText=" Transaction Discount"/>
+
+                <CheckBox fx:id="chkNeedRecipe" text="Need Recipe"/>
+
+        <Button fx:id="btnAddTransaction" text="Add Transaction - C" onAction="#btnAddTransactionClick"/>
+        <Button fx:id="btnReadClient" text="View Transaction - R" onAction="#btnReadTransactionClick"/>
+        <Button fx:id="btnUpdateClient" text="Update Transaction - U" onAction="#btnUpdateTransactionClick"/>
+        <Button fx:id="btnTransactionClient" text="Delete Transaction - D" onAction="#btnDeleteTransactionClick"/>
+    </VBox>
+
+</HBox>

@@ -76,6 +76,7 @@ public class TransactionController {
 //private double basePrice;
 //private double discount; -->
 
+    /*
     public void btnAddtransactionClick(ActionEvent actionEvent) {
         try {
             String id = txtTransactionID.getText();
@@ -92,7 +93,7 @@ public class TransactionController {
         } catch ( RuntimeException rex ){
             Common.showValidationError(rex.getMessage());
         }
-    }
+    }*/
 }
 
 //private String id, idMedicament, idClientCard, date, time;
