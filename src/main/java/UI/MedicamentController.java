@@ -51,6 +51,7 @@ public class MedicamentController {
         Platform.runLater(() -> {
             medicamentele.addAll(medicamentService.getAll());
             tblMedicamente.setItems(medicamentele);
+
         });
     }
 
@@ -117,6 +118,44 @@ public class MedicamentController {
                 Common.showValidationError(rex.getMessage());
             }
         }
+
+    public void btnAddClientClick(ActionEvent actionEvent) {
     }
+
+    public void btnReadClientClick(ActionEvent actionEvent) {
+    }
+
+    public void btnUpdateClientClick(ActionEvent actionEvent) {
+        try {
+            //  String id = txtMedicamentID.getText();
+            //   String name = txtMedicamentName.getText();
+            //   String manufacturer = txtMedicamentManufacturer.getText();
+            //     double price = Double.parseDouble(txtMedicamentPrice.getText());
+            //      boolean needRecipe = chkNeedRecipe.isSelected();
+
+            clientService.getAll(); //addOrUpdate(id,name,manufacturer,price,needRecipe);
+
+            clients.clear();
+            medicamentele.addAll(medicamentService.getAll());
+        } catch ( RuntimeException rex ){
+            Common.showValidationError(rex.getMessage());
+        }
+    }
+
+    public void btnDeleteClientClick(ActionEvent actionEvent) {
+    }
+
+    public void btnAddTransactionClick(ActionEvent actionEvent) {
+    }
+
+    public void btnReadTransactionClick(ActionEvent actionEvent) {
+    }
+
+    public void btnUpdateTransactionClick(ActionEvent actionEvent) {
+    }
+
+    public void btnDeleteTransactionClick(ActionEvent actionEvent) {
+    }
+}
 
 

@@ -1,0 +1,177 @@
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<HBox fx:controller="UI.MedicamentController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <VBox>
+        <TableView fx:id="tblMedicamente" editable="true">
+            <columns>
+                <TableColumn fx:id="colIdMedicament" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colNameMedicament" text="Medicament Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colManufacturerMedicament">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="manufacturer" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colPriceMedicament" text="Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colNeedRecipeMedicament" text="Need Recipe">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="needRecipe" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Label text="ID" />
+        <TextField fx:id="txtMedicamentID" promptText="ID"/>
+        <Label text="Name" />
+        <TextField fx:id="txtMedicamentName" promptText="Name"/>
+        <Label text="Manufacturer" />
+        <TextField fx:id="txtMedicamentManufacturer" promptText="Manufacturer"/>
+        <Label text="Price" />
+        <TextField fx:id="txtMedicamentPrice" promptText="Price"/>
+        <Label text="Need Recipes" />
+        <CheckBox fx:id="chkNeedRecipe" text="Need Recipe"/>
+
+        <Button fx:id="btnAddMedicament2" text="Add Medicament - C" onAction="#btnAddMedicament2Click"/>
+        <Button fx:id="btnReadMedicament2" text="View Medicament - R" onAction="#btnReadMedicament2Click"/>
+        <Button fx:id="btnUpdateMedicament2" text="Update Medicament - U" onAction="#btnUpdateMedicament2Click"/>
+        <Button fx:id="btnDeteleMedicament2" text="Delete Medicament - D" onAction="#btnDeleteMedicament2Click"/>
+    </VBox>
+
+    <VBox>
+        <TableView fx:id="tblClienti" editable="true">
+            <columns>
+                <TableColumn fx:id="colIdClient" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colLastNameClient" text="Client Last Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colFirstNameClient" text="Client First Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colCNPClient" text="CNP">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="CNP" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colDateOfBirthCleint" text="Client Date of Birth">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateOfBirth" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colDateOfRegistrationCleint" text="Client Date of Registration">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateOfRegistration" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TextField fx:id="txtClientID" promptText="ID"/>
+        <TextField fx:id="txtClientLastName" promptText="Last Name"/>
+        <TextField fx:id="txtClientFirstName" promptText="First Name"/>
+        <TextField fx:id="txtClientCNP" promptText="CNP"/>
+        <TextField fx:id="txtClientDateOfBirth" promptText="date of Birth"/>
+        <TextField fx:id="txtClientDateOfRegistration" promptText="Date of Registration"/>
+
+        <Button fx:id="btnAddClient" text="Add Client - C" onAction="#btnAddClientClick"/>
+        <Button fx:id="btnReadClient" text="View Client - R" onAction="#btnReadClientClick"/>
+        <Button fx:id="btnUpdateClient" text="Update Client - U" onAction="#btnUpdateClientClick"/>
+        <Button fx:id="btnDeteleClient" text="Delete Client - D" onAction="#btnDeleteClientClick"/>
+    </VBox>
+
+    <VBox>
+        <TableView fx:id="tblTransactions" editable="true">
+            <columns>
+                <TableColumn fx:id="colIdTransaction" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colIdMedicament" text="Medicament ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="idMedicament" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colIdClientCard" text="Client Id Card">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="idClientCard" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colDateTransaction" text="Transaction Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colTimeTransaction" text="Transcation Time">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="time" />
+                    </cellValueFactory>
+                </TableColumn>
+
+
+                <TableColumn fx:id="colNumberOfItemsTransaction" text="Number of Items per Transaction">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="numberOfItems;" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colBasePriceTransaction" text="Transcation Base Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="basePrice" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colDiscountTransaction" text="Transcation discount">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="discount" />
+                    </cellValueFactory>
+                </TableColumn>
+
+            </columns>
+        </TableView>
+        <TextField fx:id="txtTransactionID" promptText="ID"/>
+        <TextField fx:id="txtTransactionIdMedicament" promptText="Medicament ID"/>
+        <TextField fx:id="txtTransactionIdClientCard" promptText="Client ID Card"/>
+        <TextField fx:id="txtTransactionDate" promptText="Transaction Date"/>
+        <TextField fx:id="txtTransactionNumberOfItems" promptText="Number of Items of Transaction"/>
+        <TextField fx:id="txtTransactionBasePrice" promptText=" Transaction base Price"/>
+        <TextField fx:id="txtTransactionDdiscount" promptText=" Transaction Discount"/>
+
+        <CheckBox fx:id="chkNeedRecipe" text="Need Recipe"/>
+
+        <Button fx:id="btnAddTransaction" text="Add Transaction - C" onAction="#btnAddTransactionClick"/>
+        <Button fx:id="btnReadClient" text="View Transaction - R" onAction="#btnReadTransactionClick"/>
+        <Button fx:id="btnUpdateClient" text="Update Transaction - U" onAction="#btnUpdateTransactionClick"/>
+        <Button fx:id="btnTransactionClient" text="Delete Transaction - D" onAction="#btnDeleteTransactionClick"/>
+    </VBox>
+
+
+</HBox>

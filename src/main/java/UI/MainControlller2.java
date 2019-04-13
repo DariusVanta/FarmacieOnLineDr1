@@ -30,6 +30,63 @@ public class MainControlller2 {
     private ClientService clientService;
     private TransactionService transactionService;
 
+    public TableView tblTransaction;
+    public TableColumn colIdTransaction;
+    public TableColumn colIdMedicamentTransaction;
+    public TableColumn colidClientCardTransaction;
+    public TableColumn colDateTransaction;
+    public TableColumn colTimeTransaction;
+    public TableColumn colNumberOfItemsTransaction;
+    public TableColumn colBasePriceTransaction;
+    public TableColumn colDiscountTransaction;
+
+
+
+
+    public TextField txtTransactionID;
+    public TextField txtTransactionIdMedicament;
+    public TextField txtTransactionIdClientCard;
+    public TextField txtTransactionDate;
+    public TextField txtTransactionTime;
+    public TextField txtTransactionNumberOfItems;
+    public TextField txtTransactionBasePrice;
+    public TextField txtTransactionDiscount;
+
+
+    public Button btnAddTransaction;
+    public Button btnReadTransaction;
+    public Button btnUpdateTransaction;
+    public Button btnDeteleTransaction;
+
+    public TableView tblClient;
+    public TableColumn colIdClient;
+    public TableColumn colIdMedicamentClient;
+    public TableColumn colidClientCardClient;
+    public TableColumn colDateClient;
+    public TableColumn colTimeClient;
+    public TableColumn colNumberOfItemsClient;
+    public TableColumn colBasePriceClient;
+    public TableColumn colDiscountClient;
+
+
+
+
+    public TextField txtClientID;
+    public TextField txtClientIdMedicament;
+    public TextField txtClientIdClientCard;
+    public TextField txtClientDate;
+    public TextField txtClientTime;
+    public TextField txtClientNumberOfItems;
+    public TextField txtClientBasePrice;
+    public TextField txtClientDiscount;
+
+
+    public Button btnAddClient;
+    public Button btnReadClient;
+    public Button btnUpdateClient;
+    public Button btnDeteleClient;
+
+
     private ObservableList<Medicament> medicamente = FXCollections.observableArrayList();
 
     public void setServices(MedicamentService medicamentService, ClientService clientService, TransactionService transactionService) {

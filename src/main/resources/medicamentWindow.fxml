@@ -49,7 +49,7 @@
         <Label text="Name" />
         <TextField fx:id="txtMedicamentName" promptText="Name"/>
         <Label text="Manufacturer" />
-        <TextField fx:id="txtMedicamentManufacurer" promptText="Manufacturer"/>
+        <TextField fx:id="txtMedicamentManufacturer" promptText="Manufacturer"/>
         <Label text="Price" />
         <TextField fx:id="txtMedicamentPrice" promptText="Price"/>
         <Label text="Need Recipe" />
