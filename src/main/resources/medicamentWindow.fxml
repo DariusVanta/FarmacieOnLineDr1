@@ -27,7 +27,7 @@
                         <PropertyValueFactory property="name" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn fx:id="colManufacturerMedicament" text="Manufacturer">
+                <TableColumn fx:id="colManufacturerMedicament">
                     <cellValueFactory>
                         <PropertyValueFactory property="manufacturer" />
                     </cellValueFactory>
@@ -44,10 +44,15 @@
                 </TableColumn>
             </columns>
         </TableView>
+        <Label text="ID" />
         <TextField fx:id="txtMedicamentID" promptText="ID"/>
+        <Label text="Name" />
         <TextField fx:id="txtMedicamentName" promptText="Name"/>
+        <Label text="Manufacturer" />
         <TextField fx:id="txtMedicamentManufacurer" promptText="Manufacturer"/>
+        <Label text="Price" />
         <TextField fx:id="txtMedicamentPrice" promptText="Price"/>
+        <Label text="Need Recipe" />
         <CheckBox fx:id="chkNeedRecipe" text="Need Recipe"/>
 
         <Button fx:id="btnAddMedicament2" text="Add Medicament - C" onAction="#btnAddMedicament2Click"/>
